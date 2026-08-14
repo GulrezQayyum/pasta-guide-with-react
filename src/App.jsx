@@ -1,122 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from 'react';
+import PastaGallery from './components/PastaGallery';
+import PastaDetail from './components/PastaDetail';
+import { pastas } from './data/pastas';
+import './index.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // State for search/filter
+  const [searchTerm, setSearchTerm] = useState('');
+  
+  // State for selected pasta (to show modal)
+  const [selectedPasta, setSelectedPasta] = useState(null);
+
+  // Filter pastas based on search
+  const filteredPastas = pastas.filter(pasta =>
+    pasta.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    pasta.bestSauce.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50">
+      {/* Header */}
+      <header className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-8 px-4 shadow-lg">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">🍝 Pasta Shape Guide</h1>
+          <p className="text-lg opacity-90">Learn about different pasta types, their origins, and perfect pairings</p>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-6xl mx-auto px-4 py-12">
+        {/* Search Bar */}
+        <div className="mb-8">
+          <input
+            type="text"
+            placeholder="Search pasta by name or sauce type..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full px-6 py-3 rounded-lg border-2 border-orange-300 focus:border-orange-600 focus:outline-none text-lg shadow-md"
+          />
+          <p className="text-gray-600 mt-2 text-sm">
+            Found {filteredPastas.length} pasta{filteredPastas.length !== 1 ? 's' : ''}
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
+        {/* Pasta Gallery */}
+        <PastaGallery 
+          pastas={filteredPastas} 
+          onSelectPasta={setSelectedPasta}
+        />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        {/* No results message */}
+        {filteredPastas.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg">No pasta found. Try a different search!</p>
+          </div>
+        )}
+      </main>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* Detail Modal */}
+      {selectedPasta && (
+        <PastaDetail 
+          pasta={selectedPasta} 
+          onClose={() => setSelectedPasta(null)}
+        />
+      )}
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white text-center py-6 mt-16">
+        <p>Built with React | #FrontendChallenge | Learn, Code, Share</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
