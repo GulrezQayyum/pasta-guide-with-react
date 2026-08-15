@@ -2,8 +2,6 @@
 
 A beautiful, interactive React web application that teaches users about different pasta shapes, their origins, cooking times, and perfect sauce pairings. Built for the **Frontend Challenge: Comfort Food Edition** on DEV Community.
 
-![Pasta Guide Preview](https://chatgpt.com/backend-api/estuary/content?id=file_00000000723c82119a12649332796c35&ts=496336&p=fs&cid=1&sig=9ba10da187ebd1f77bf6b088dfa1b2fa23817db50122c3dfc9fe538a3af9cfc1&v=0)
-
 ---
 
 ## 📋 Table of Contents
