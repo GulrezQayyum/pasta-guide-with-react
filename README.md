@@ -2,6 +2,8 @@
 
 A beautiful, interactive React web application that teaches users about different pasta shapes, their origins, cooking times, and perfect sauce pairings. Built for the **Frontend Challenge: Comfort Food Edition** on DEV Community.
 
+[![DEV Community Challenge](https://img.shields.io/badge/DEV%20COMMUNITY-CHALLENGE-00A8CC?style=flat-square&labelColor=4B4B4B)](https://dev.to/)
+
 ---
 
 ## 📋 Table of Contents
