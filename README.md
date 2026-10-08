@@ -1,4 +1,4 @@
-# 🍝 Pasta Shape Guide - Interactive Learning Experience
+#  Pasta Shape Guide - Interactive Learning Experience
 
 A beautiful, interactive React web application that teaches users about different pasta shapes, their origins, cooking times, and perfect sauce pairings. Built for the **Frontend Challenge: Comfort Food Edition** on DEV Community.
 
@@ -6,7 +6,7 @@ A beautiful, interactive React web application that teaches users about differen
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
@@ -17,36 +17,36 @@ A beautiful, interactive React web application that teaches users about differen
 
 ---
 
-## ✨ Features
+##  Features
 
 ### Gallery & Search
-- 🔍 **Smart Search** - Filter pasta by name or sauce type in real-time
-- 🎨 **Beautiful Cards** - Each pasta type displayed with high-quality images
-- 📱 **Responsive Design** - Works perfectly on mobile, tablet, and desktop
-- ✨ **Smooth Animations** - Hover effects and transitions throughout
+-  **Smart Search** - Filter pasta by name or sauce type in real-time
+-  **Beautiful Cards** - Each pasta type displayed with high-quality images
+-  **Responsive Design** - Works perfectly on mobile, tablet, and desktop
+-  **Smooth Animations** - Hover effects and transitions throughout
 
 ### Detailed Pasta Information
-- ⏱️ **Cooking Time** - How long each pasta takes to cook
-- 🌍 **Origin** - Where each pasta shape comes from
-- 🍴 **Best Sauces** - Recommended sauce pairings for each type
-- 📖 **Full Recipes** - Complete recipe instructions and cooking tips
-- 💡 **Chef's Tips** - Professional cooking advice for each pasta
+-  **Cooking Time** - How long each pasta takes to cook
+-  **Origin** - Where each pasta shape comes from
+-  **Best Sauces** - Recommended sauce pairings for each type
+-  **Full Recipes** - Complete recipe instructions and cooking tips
+-  **Chef's Tips** - Professional cooking advice for each pasta
 
 ### Navigation & Routing
-- 🔗 **Full-Page Routes** - Click to view detailed recipe on separate page
-- 📍 **URL Support** - Shareable links for each pasta (`/pasta/1`, `/pasta/2`, etc.)
-- ↩️ **Browser Navigation** - Back button works as expected
-- 🎯 **Seamless Transitions** - Smooth page changes without page reload
+-  **Full-Page Routes** - Click to view detailed recipe on separate page
+-  **URL Support** - Shareable links for each pasta (`/pasta/1`, `/pasta/2`, etc.)
+-  **Browser Navigation** - Back button works as expected
+-  **Seamless Transitions** - Smooth page changes without page reload
 
 ### User Experience
-- 🎨 **Modern UI/UX** - Clean, professional design with gradients and spacing
-- ⚡ **Fast Performance** - Lazy loading images for quick page loads
-- 🛡️ **Error Handling** - Placeholder images if URLs fail
-- ♿ **Accessibility** - Semantic HTML and proper image alt text
+-  **Modern UI/UX** - Clean, professional design with gradients and spacing
+-  **Fast Performance** - Lazy loading images for quick page loads
+-  **Error Handling** - Placeholder images if URLs fail
+-  **Accessibility** - Semantic HTML and proper image alt text
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 ### Frontend Framework
 - **React 18** - Component-based UI library
@@ -64,7 +64,7 @@ A beautiful, interactive React web application that teaches users about differen
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 pasta-guide/
@@ -111,7 +111,7 @@ pasta-guide/
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ### Prerequisites
 - Node.js (v14 or higher)
@@ -153,7 +153,7 @@ Creates optimized build in `dist/` folder.
 
 ---
 
-## 📖 Usage
+##  Usage
 
 ### Browsing Pastas
 1. Open the app at `http://localhost:5173`
@@ -195,21 +195,21 @@ This was my first time building with React! I learned:
 
 ## Features I'm Proud Of
 
-- ✅ Full-page routing (not just modals)
-- ✅ Smooth animations and transitions
-- ✅ Professional UI/UX design
-- ✅ Search & filter functionality
-- ✅ Educational content about each pasta
-- ✅ Responsive mobile-first design
-- ✅ Error handling for images
-- ✅ Shareable URLs for each pasta
+-  Full-page routing (not just modals)
+-  Smooth animations and transitions
+-  Professional UI/UX design
+-  Search & filter functionality
+-  Educational content about each pasta
+-  Responsive mobile-first design
+-  Error handling for images
+-  Shareable URLs for each pasta
 
 ## Try It Out!
 
-🔗 **Live Demo:** [https://pasta-guide-with-react.vercel.app/]
+ **Live Demo:** [https://pasta-guide-with-react.vercel.app/]
 
 
-## 🔧 Customization
+##  Customization
 
 ### Add More Pastas
 Edit `src/data/pastas.js` and add to the array:
@@ -253,7 +253,7 @@ Examples:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 This is a personal project for a challenge, but here's how to suggest improvements:
 
@@ -266,18 +266,18 @@ This is a personal project for a challenge, but here's how to suggest improvemen
 ---
 
 
-## 🎉 Final Notes
+##  Final Notes
 
 This project demonstrates:
-- ✅ React fundamentals and hooks
-- ✅ Component architecture
-- ✅ Client-side routing
-- ✅ Responsive design
-- ✅ Real-world best practices
-- ✅ Deployment and production builds
+-  React fundamentals and hooks
+-  Component architecture
+-  Client-side routing
+-  Responsive design
+-  Real-world best practices
+-  Deployment and production builds
 
 ---
 
-**Built with 🍝 and React | #FrontendChallenge**
+**Built with pasta and React | #FrontendChallenge**
 
 Last updated: August 2026
